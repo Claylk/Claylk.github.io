@@ -1,0 +1,120 @@
+body {
+    background-color: #FFFCEF;
+    margin: 0 0 0 0;
+  }
+
+  .lightswitch input {
+    display: none;
+  }
+
+  .lightswitch .switch-image {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+    top: 250px;
+    margin: auto;
+    width: 80px;
+    height: 112px;
+    background-image: url("assets/lightswitch_off.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: transform 0.3s;
+  }
+
+  .lightswitch input:hover+.switch-image {
+    transform: translateY(-3px);
+  }
+
+  .lightswitch input:checked+.switch-image {
+    background-image: url("assets/lightswitch_on.png");
+  }
+
+  .dark-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+  }
+
+  .flex-container {
+    position: relative;
+    top: 320px;
+    border-radius: 2px;
+    border-color: black;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+  }
+
+  .music-note1 {
+    position: relative;
+    left: -50px;
+    width: 24px;
+  }
+
+  .music-note2 {
+    position: relative;
+    left: 50px;
+    width: 24px;
+  }
+
+  .music-player input{
+    display: none;
+  }
+
+  .music-player .switch-image {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    top: 360px;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    background-image: url("assets/pause_button.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: transform 0.3s;
+  }
+
+  .music-player input:hover+.switch-image {
+    transform: translateY(-3px);
+  }
+
+  .music-player input:checked+.switch-image {
+    background-image: url("assets/play_button.png");
+  }
+
+  .current-song-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    top: 210px;
+  }
+
+  .current-song-container p{
+    z-index: 1;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    color: rgb(35,35,35);
+  }
+
+  .laptop {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 50vh;
+    left: 70vw;
+  }
+
+  .laptop .laptop-image {
+    width: 260px;
+    z-index: 2;
+  }
