@@ -41,20 +41,19 @@ body {
 
 .about-me-link {
   position: absolute;
-  bottom: 0vh;
+  top: 80px;
   right: 65vw;
   width: 300px;
   height: 525px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-image: url("assets/door_closed.png");
-  transition: background-image 1s ease;
 }
 
 .about-me-link:hover {
   background-image: url("assets/door_open.png");
-  width: 561px;
-  height: 543px;
+  height: 561px;
+  top: 62px;
 }
 
 
