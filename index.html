@@ -25,9 +25,9 @@
 
     checkbox.addEventListener('change', function() {
         if (this.checked) {
-            image.style.display = 'none';
-        } else {
             image.style.display = 'block';
+        } else {
+            image.style.display = 'none';
         }
     });
   </script>
@@ -66,12 +66,16 @@
     });
 
   </script>
+
+  <div class="about-me">
+    <a href="aboutme.html" class="about-me-link"></a>
+  </div>
   
   <div class="current-song-container">
     <p id="current-song-title"></p>
   </div>
 
-  <script>
+  <!-- <script>
     function updateCurrentlyPlayingSong() {
       const currentSongTitle = document.getElementById('current-song-title');
   
@@ -99,13 +103,7 @@
     SC.Widget(widgetIframe).bind(SC.Widget.Events.READY, function () {
       updateCurrentlyPlayingSong();
     });
-  </script>
-
-  <div class="laptop">
-    <img class="laptop-image" src="assets/laptop.png">
-  </div>
-  
-  
+  </script> -->
   
 
 </body>
