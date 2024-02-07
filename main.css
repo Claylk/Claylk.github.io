@@ -16,7 +16,7 @@ body {
   margin: auto;
   width: 80px;
   height: 112px;
-  background-image: url("assets/lightswitch_off.png");
+  background-image: url("assets/lightswitch_on.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   transition: transform 0.3s;
@@ -27,7 +27,7 @@ body {
 }
 
 .lightswitch input:checked+.switch-image {
-  background-image: url("assets/lightswitch_on.png");
+  background-image: url("assets/lightswitch_off.png");
 }
 
 .dark-overlay {
@@ -41,11 +41,13 @@ body {
 
 .about-me-link {
   position: absolute;
-  top: 50vh;
-  right: 10vw;
-  width: 80px;
-  height: 112px;
-  background-color: black;
+  bottom: 0vh;
+  right: 15vw;
+  width: 300px;
+  height: 525px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("assets/door_closed.png");
 }
 
 .flex-container {
