@@ -41,10 +41,10 @@ body {
 
 .about-me-link {
   position: absolute;
-  top: 50px;
+  top: 100px;
   right: 65vw;
-  width: 300px;
-  height: 525px;
+  width: 240px;
+  height: 420px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-image: url("assets/door_closed.png");
@@ -52,8 +52,8 @@ body {
 
 .about-me-link:hover {
   background-image: url("assets/door_open.png");
-  height: 561px;
-  top: 32px;
+  height: 449px;
+  top: 86px;
 }
 
 
@@ -119,6 +119,26 @@ body {
 
 .current-song-container p {
   z-index: 1;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  color: rgb(35, 35, 35);
+}
+
+.info {
+  position: absolute;
+  height: 200px;
+  width: 100vw;
+}
+
+.name {
+  text-align: center;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 22px;
+  color: rgb(35, 35, 35);
+}
+
+.contact {
+  text-align: center;
   font-family: 'Ubuntu Mono', monospace;
   font-size: 14px;
   color: rgb(35, 35, 35);
