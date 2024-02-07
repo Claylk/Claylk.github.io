@@ -1,0 +1,21 @@
+body {
+    background-color: #FFFCEF;
+    margin: 0 0 0 0;
+}
+
+.home-page-link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 50px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("assets/back_button.png");
+    transition: transform 0.3s;
+  }
+  
+  .home-page-link:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+  }

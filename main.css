@@ -41,7 +41,7 @@ body {
 
 .about-me-link {
   position: absolute;
-  top: 80px;
+  top: 50px;
   right: 65vw;
   width: 300px;
   height: 525px;
@@ -53,7 +53,7 @@ body {
 .about-me-link:hover {
   background-image: url("assets/door_open.png");
   height: 561px;
-  top: 62px;
+  top: 32px;
 }
 
 
@@ -100,7 +100,7 @@ body {
 }
 
 .music-player input:hover+.switch-image {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .music-player input:checked+.switch-image {
