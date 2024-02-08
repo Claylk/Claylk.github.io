@@ -49,7 +49,9 @@ body {
 }
 
 .bio {
-  position: absolute;
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 10px;
   left: 5vw;
   width: 35vw;
   z-index: 1;
@@ -65,11 +67,12 @@ body {
 
 .picture {
   position: absolute;
+  margin-top: 0px;
   right: 10vw;
   top: 100px;
-  width: 526px;
-  height: 321px;
-  /* background-image: url("assets/basel.png"); */
+  width: 250px;
+  height: 250px;
+  background-image: url("assets/aboutme.png");
   background-size: 100% 100%;
   animation: fadeIn 0.8s ease-in-out;
 }

@@ -23,7 +23,7 @@ body {
 }
 
 .lightswitch input:hover+.switch-image {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .lightswitch input:checked+.switch-image {
@@ -42,7 +42,7 @@ body {
 .about-me-link {
   position: absolute;
   top: 100px;
-  right: 65vw;
+  left: 8vw;
   width: 240px;
   height: 420px;
   background-size: 100% 100%;
@@ -135,11 +135,19 @@ body {
   font-family: 'Ubuntu Mono', monospace;
   font-size: 22px;
   color: rgb(35, 35, 35);
+  margin-bottom: 10px;
 }
 
-.contact {
+.email {
   text-align: center;
+}
+
+.email-link {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-decoration: none;
   font-family: 'Ubuntu Mono', monospace;
   font-size: 14px;
-  color: rgb(35, 35, 35);
+  color: rgb(50, 50, 50);
 }
