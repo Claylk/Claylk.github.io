@@ -22,9 +22,11 @@
             <div class="tp-text">
                 <p class="tp-header">Trajectory Planning for Robotic Arm</p>
                 <a class="tp-link" href="https://github.com/rsx-utoronto/rsx-rover/blob/master/rover/arm/scripts/arm_trajectory_planning.py">Github Link</a>
-                <p class="tp-body">For the Robotics for Space Exploration design team (at the University of Toronto), I put together a ROS node that controls a mechanical arm mounted atop our rover. <br><br>
-                The primary goal of the node is to reduce the arm's jerk when moving between two points, ensuring safety and durability. It does this by generating a polynomial curve for each motor that drives the arm, which has zero velocity at the end points.
+                <p class="tp-body">For the Robotics for Space Exploration design team (at the University of Toronto), I created a ROS node that controls a mechanical arm mounted atop our rover.</p>
+                <p class="tp-body">The primary goal of the node is to reduce the arm's jerk when moving between two points, ensuring safety and durability. It does this by generating a polynomial curve for each motor that drives the arm, which has zero velocity at the end points.
+                                   A PID controller helps to compensate for error between calculated angles and sensor data from CAN.
                 </p>
+                <p class="tp-body">The node was written in Python using ROS 1.</p>
             </div>
             <div class="tp-video">
                 <video class="moving-arm" loop muted autoplay>
