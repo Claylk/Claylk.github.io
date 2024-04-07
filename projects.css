@@ -3,11 +3,77 @@ body {
     margin: 0 0 0 0;
 }
 
-.header {
+.home-page-link:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.intro {
     position: absolute;
-    top: 0px;
-    width: 100vh;
-    height: 100px;
+    white-space: nowrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    left: 130px;
+    width: 50vw;
+    z-index: 1;
+    text-align: left;
+    top: 10px;
+    z-index: 1;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 20px;
+    color: rgb(35, 35, 35);
+    opacity: 1;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.trajectory-planning {
+    position: absolute;
+    top: 120px;
+    width: 100vw;
+    margin-left: 20px;
+
+    font-family: 'Ubuntu Mono', monospace;
+    color: rgb(35, 35, 35);
+    opacity: 1;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.tp-header {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 22px;
+}
+
+.tp-content {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.tp-video {
+    position: relative;
+    margin-left: 30px;
+    width: 40vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.tp-text {
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 50vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.moving-arm {
+    width: 100%;
+    height: auto;
 }
 
 .home-page-link {
@@ -23,18 +89,13 @@ body {
     transition: transform 0.3s;
 }
 
-.home-page-link:hover {
-    cursor: pointer;
-    transform: translateY(-2px);
-}
-
-.intro {
-    position: relative;
-    margin-top: 0px;
-    top: 100px;
-    width: 50vw;
-    text-align: left;
-    font-family: 'Ubuntu Mono', monospace;
-    font-size: 20px;
-    color: rgb(35, 35, 35);
-}
+@keyframes fadeIn {
+    from {
+      transform: translateY(-5px);
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
