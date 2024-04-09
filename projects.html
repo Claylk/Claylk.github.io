@@ -14,24 +14,42 @@
     <div class="home-page">
         <a href="index.html" class="home-page-link"></a>
     </div>
-    <div class="header">
+    <div class="main-header">
         <p class="intro">Here are some of the projects I've done and am currently working on!</p>
     </div>
-    <div class ="trajectory-planning">
-        <div class="tp-content">
-            <div class="tp-text">
-                <p class="tp-header">Trajectory Planning for Robotic Arm</p>
-                <a class="tp-link" href="https://github.com/rsx-utoronto/rsx-rover/blob/master/rover/arm/scripts/arm_trajectory_planning.py">Github Link</a>
-                <p class="tp-body">For the Robotics for Space Exploration design team (at the University of Toronto), I created a ROS node that controls a mechanical arm mounted atop our rover.</p>
-                <p class="tp-body">The primary goal of the node is to reduce the arm's jerk when moving between two points, ensuring safety and durability. It does this by generating a polynomial curve for each motor that drives the arm, which has zero velocity at the end points.
-                                   A PID controller helps to compensate for error between calculated angles and sensor data from CAN.
-                </p>
-                <p class="tp-body">The node was written in Python using ROS 1.</p>
+    <div class="project-list">
+        <div class ="trajectory-planning">
+            <div class="content">
+                <div class="text">
+                    <p class="header">Trajectory Planning for Robotic Arm</p>
+                    <a class="link" href="https://github.com/rsx-utoronto/rsx-rover/blob/master/rover/arm/scripts/arm_trajectory_planning.py">Github Link</a>
+                    <p class="body">For the Robotics for Space Exploration design team (at the University of Toronto), I created a ROS node that controls a mechanical arm mounted atop our rover.</p>
+                    <p class="body">The primary goal of the node is to reduce the arm's jerk when moving between two points, ensuring safety and durability. It does this by generating a polynomial curve for each motor that drives the arm, which has zero velocity at the end points.
+                                       A PID controller helps to compensate for error between calculated angles and sensor data from CAN.
+                    </p>
+                    <p class="body">The node was written for ROS 1 using Python.</p>
+                </div>
+                <div class="video">
+                    <video class="moving-arm" loop muted autoplay>
+                        <source src="assets/moving_arm.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
-            <div class="tp-video">
-                <video class="moving-arm" loop muted autoplay>
-                    <source src="assets/moving_arm.mp4" type="video/mp4">
-                </video>
+        </div>
+        <div class ="mapper">
+            <div class="content">
+                <div class="video">
+                    <video class="car-driving" loop muted autoplay>
+                        <source src="assets/car_driving.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="text">
+                    <p class="header">The Happy Map App</p>
+                    <p class="subtitle">For Software Design and Communication at the University of Toronto</p>
+                    <p class="body">Two groupmates and I are currently creating a GIS system, although they are probably not fond of the name I've given it.</p>
+                    <p class="body">The application uses the Open Street Map database and a graphics library provided by the University of Toronto (ezgl). My most challenging responsibilities for this project were implementing the A Star search algorithm, an autocompleted search bar in GTK, and creating the animations for the map (such as the one shown in the video). It's been a lot of fun and we hope to continue refining it towards the end of the semester.</p>
+                    <p class="body">I wanted to link a Github here, but unfortunately I might get kicked out of school if someone decides to copy it.</p>
+                </div>
             </div>
         </div>
     </div>
