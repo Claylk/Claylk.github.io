@@ -68,8 +68,32 @@ body {
 
 .content {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: flex-start;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.gallery-video {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 30vw;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.gallery-desc {
+    margin-left: 10px;
+    font-family: 'Ubuntu Mono', monospace;
+    color: rgb(35, 35, 35);
+    opacity: 1;
+    animation: fadeIn 0.8s ease-in-out;
 }
 
 .video {
