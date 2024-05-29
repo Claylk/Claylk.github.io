@@ -1,0 +1,24 @@
+<script type="module">
+
+    // import kaboom.js
+    import kaboom from "https://unpkg.com/kaboom@3000.0.1/dist/kaboom.mjs";
+    
+    // initialize kaboom context
+    kaboom();
+    
+    // add a piece of text at position (120, 80)
+    add([
+        text("hello"),
+        pos(120, 80),
+    ]);
+    
+    loadRoot("https://claylk.github.io/assets/sprites/")
+    loadSprite("test", "test.png");
+
+    const player = add([
+        sprite("test"),   // sprite() component makes it render as a sprite
+        pos(120, 80),     // pos() component gives it position, also enables movement
+        rotate(0),        // rotate() component gives it rotation
+        anchor("center"), // anchor() component defines the pivot point (defaults to "topleft")
+    ])
+</script>
