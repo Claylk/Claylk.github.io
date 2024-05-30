@@ -4,21 +4,57 @@
     import kaboom from "https://unpkg.com/kaboom@3000.0.1/dist/kaboom.mjs";
     
     // initialize kaboom context
-    kaboom();
-    
-    // add a piece of text at position (120, 80)
-    add([
-        text("hello"),
-        pos(120, 80),
-    ]);
-    
-    loadRoot("https://claylk.github.io/assets/sprites/")
-    loadSprite("test", "test.png");
+    kaboom({
+	    background: [206, 234, 255],
+    })
+ 
+    loadRoot("https://claylk.github.io/assets/sprites/");
+    loadSprite("test_level", "levels/test_level.png");
+    loadSprite("player", "characters/fish.png", {
+        sliceX: 2,
+        anims: {
+            "idle": {
+			from: 0,
+			to: 1,
+			speed: 5,
+			loop: true,
+		    },
+        }
+    });
+
+    let tile_hori_size = 12;
+    let tile_vert_size = 6;
+
+    let y_size = 74;
+    let x_size = 120;
+
+    const test_level = add([
+        sprite("test_level"),
+        pos(center().x - (x_size / 2), center().y - (y_size / 2)),
+        
+    ])
 
     const player = add([
-        sprite("test"),   // sprite() component makes it render as a sprite
-        pos(120, 80),     // pos() component gives it position, also enables movement
-        rotate(0),        // rotate() component gives it rotation
-        anchor("center"), // anchor() component defines the pivot point (defaults to "topleft")
+        sprite("player"),   // sprite() component makes it render as a sprite
+        pos(center().x, center().y),     // pos() component gives it position, also enables movement
     ])
+
+    player.play("idle");
+
+    onKeyDown("right", () => {
+        player.move(SPEED * dt(), 0)
+    })
+
+    onKeyDown("left", () => {
+        player.move(-SPEED * dt(), 0)
+    })
+
+    onKeyDown("up", () => {
+        player.move(0, -SPEED * dt())
+    })
+
+    onKeyDown("down", () => {
+        player.move(0, SPEED * dt())
+    })
+
 </script>
