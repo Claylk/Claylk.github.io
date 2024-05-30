@@ -9,7 +9,14 @@
     })
  
     loadRoot("https://claylk.github.io/assets/sprites/");
+
+    // background
     loadSprite("test_level", "levels/test_level.png");
+
+    // UI
+    loadSprite("right_arrow", "ui/arrow_right.png");
+    loadSprite("left_arrow", "ui/arrow_left.png");
+
     loadSprite("player", "characters/fish1.png", {
         sliceY: 2,
         anims: {
@@ -29,34 +36,51 @@
     let x_size = 120;
     let level_scale_factor = 4;
 
+    let hori_move = tile_hori_size * 240;
+    let vert_move = tile_vert_size * 240;
+
+    const start_position = new Vec2(center().x - (12 * level_scale_factor), center().y - (13 * level_scale_factor));
+
     const test_level = add([
         sprite("test_level"),
         pos(center().x - (x_size * level_scale_factor / 2), center().y - (y_size * level_scale_factor / 2)),
         scale(level_scale_factor),
     ])
 
+    const right_arrow = add([
+        sprite("right_arrow"),
+        opacity(1),
+        scale(level_scale_factor),
+    ])
+
+    const left_arrow = add([
+        sprite("left_arrow"),
+        opacity(0),
+        scale(level_scale_factor),
+    ])
+
     const player = add([
         sprite("player"),   // sprite() component makes it render as a sprite
-        pos(center().x, center().y),     // pos() component gives it position, also enables movement
+        pos(start_position.x, start_position.y),     // pos() component gives it position, also enables movement
         scale(level_scale_factor),
     ])
 
     player.play("idle");
 
-    onKeyDown("right", () => {
-        player.move(SPEED * dt(), 0)
+    onKeyRelease("right", () => {
+        player.move(hori_move, vert_move)
     })
 
-    onKeyDown("left", () => {
-        player.move(-SPEED * dt(), 0)
+    onKeyRelease("left", () => {
+        player.move(-hori_move, -vert_move)
     })
 
-    onKeyDown("up", () => {
-        player.move(0, -SPEED * dt())
+    onKeyRelease("up", () => {
+        player.move(hori_move, -vert_move)
     })
 
-    onKeyDown("down", () => {
-        player.move(0, SPEED * dt())
+    onKeyRelease("down", () => {
+        player.move(-hori_move, vert_move)
     })
 
 </script>
