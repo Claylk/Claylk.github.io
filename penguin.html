@@ -11,12 +11,12 @@
     loadRoot("https://claylk.github.io/assets/sprites/");
     loadSprite("test_level", "levels/test_level.png");
     loadSprite("player", "characters/fish.png", {
-        sliceX: 2,
+        sliceY: 2,
         anims: {
             "idle": {
 			from: 0,
 			to: 1,
-			speed: 5,
+			speed: 3,
 			loop: true,
 		    },
         }
@@ -27,16 +27,18 @@
 
     let y_size = 74;
     let x_size = 120;
+    let level_scale_factor = 4;
 
     const test_level = add([
         sprite("test_level"),
-        pos(center().x - (x_size / 2), center().y - (y_size / 2)),
-        
+        pos(center().x - (x_size * level_scale_factor / 2), center().y - (y_size * level_scale_factor / 2)),
+        scale(level_scale_factor),
     ])
 
     const player = add([
         sprite("player"),   // sprite() component makes it render as a sprite
         pos(center().x, center().y),     // pos() component gives it position, also enables movement
+        scale(level_scale_factor),
     ])
 
     player.play("idle");
