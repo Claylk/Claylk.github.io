@@ -14,8 +14,8 @@
     loadSprite("test_level", "levels/test_level.png");
 
     // UI
-    loadSprite("right_arrow", "ui/arrow_right.png");
-    loadSprite("left_arrow", "ui/arrow_left.png");
+    loadSprite("right_arrow", "ui/arrow_right1.png");
+    loadSprite("left_arrow", "ui/arrow_left1.png");
 
     loadSprite("player", "characters/fish1.png", {
         sliceY: 2,
@@ -47,40 +47,75 @@
         scale(level_scale_factor),
     ])
 
+    const left_arrow = add([
+        sprite("left_arrow"),
+        pos(start_position.x - tile_hori_size * level_scale_factor * 2, 
+            start_position.y + tile_vert_size * level_scale_factor * 2),
+        opacity(1),
+        scale(level_scale_factor),
+    ])
+    
     const right_arrow = add([
         sprite("right_arrow"),
+        pos(start_position.x + tile_hori_size * level_scale_factor * 2, 
+            start_position.y - tile_vert_size * level_scale_factor * 2),
         opacity(1),
         scale(level_scale_factor),
     ])
 
-    const left_arrow = add([
+    const up_arrow = add([
+        sprite("right_arrow"),
+        pos(start_position.x + tile_hori_size * level_scale_factor * 2, 
+            start_position.y + tile_vert_size * level_scale_factor * 2),
+        opacity(1),
+        scale(level_scale_factor),
+    ])
+
+    const down_arrow = add([
         sprite("left_arrow"),
-        opacity(0),
+        pos(start_position.x - tile_hori_size * level_scale_factor * 2, 
+            start_position.y - tile_vert_size * level_scale_factor * 2),
+        opacity(1),
         scale(level_scale_factor),
     ])
 
     const player = add([
-        sprite("player"),   // sprite() component makes it render as a sprite
-        pos(start_position.x, start_position.y),     // pos() component gives it position, also enables movement
+        sprite("player"),
+        pos(start_position),
         scale(level_scale_factor),
     ])
 
     player.play("idle");
 
-    onKeyRelease("right", () => {
+    onKeyRelease("d", () => {
         player.move(hori_move, vert_move)
     })
 
-    onKeyRelease("left", () => {
+    onKeyRelease("a", () => {
         player.move(-hori_move, -vert_move)
     })
 
-    onKeyRelease("up", () => {
+    onKeyRelease("w", () => {
         player.move(hori_move, -vert_move)
     })
 
-    onKeyRelease("down", () => {
+    onKeyRelease("s", () => {
         player.move(-hori_move, vert_move)
+    })
+
+    onKeyRelease("right", () => {
+       
+    })
+
+    onKeyRelease("left", () => {
+    })
+
+    onKeyRelease("up", () => {
+        right_arrow.moveTo(start_position.x + player_x + hori_move, 
+                           start_position.y + player_y - vert_move);
+    })
+
+    onKeyRelease("down", () => {
     })
 
 </script>
