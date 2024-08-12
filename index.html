@@ -42,7 +42,11 @@
     });
   </script>
 
-  <label class="music-player">
+  <div class="hover-title-container">
+    <p class="hover-title-hide" id="hover-title"></p>
+  </div>
+
+  <!-- <label class="music-player">
     <input type="checkbox" id="start-stop">
     <span class="switch-image"></span>
   </label>
@@ -54,45 +58,41 @@
     <div>
       <img class="music-note2" src="assets/music_note.png" alt="note2">
     </div>
-  </div>
+  </div> -->
 
   <div class="about-me">
-    <a href="projects.html" class="about-me-link"></a>
+    <a href="projects.html" class="about-me-link" id="about-me-link"></a>
   </div>
 
   <div class="fun-zone">
-    <a href="funzone.html" class="fun-zone-link"></a>
+    <a href="aboutme.html" class="fun-zone-link" id="fun-zone-link"></a>
   </div>
 
-  <!-- <script>
-    function updateCurrentlyPlayingSong() {
-      const currentSongTitle = document.getElementById('current-song-title');
-  
-      SC.Widget(widgetIframe).bind(SC.Widget.Events.READY, function () {
-        SC.Widget(widgetIframe).getCurrentSound(function (currentSound) {
-          if (currentSound) {
-            currentSongTitle.textContent = currentSound.user.username + ' • ' + currentSound.title;
-          } else {
-            currentSongTitle.textContent = '';
-          }
-        });
-        
-        SC.Widget(widgetIframe).bind(SC.Widget.Events.PLAY, function () {
-          SC.Widget(widgetIframe).getCurrentSound(function (currentSound) {
-            if (currentSound) {
-              currentSongTitle.textContent = currentSound.user.username + ' • ' + currentSound.title;
-            } else {
-              currentSongTitle.textContent = '';
-            }
-          });
-        });
-      });
-    }
-  
-    SC.Widget(widgetIframe).bind(SC.Widget.Events.READY, function () {
-      updateCurrentlyPlayingSong();
+  <script>
+    const hoverTitle = document.getElementById('hover-title');
+    const projectsButton = document.getElementById('about-me-link');
+    const funZoneButton = document.getElementById('fun-zone-link');
+
+    projectsButton.addEventListener('mouseover', function () {
+      hoverTitle.textContent = '• Projects •';
+      hoverTitle.setAttribute("class", "hover-title-show");
     });
-  </script> -->
+
+    projectsButton.addEventListener('mouseleave', function () {
+      hoverTitle.setAttribute("class", "hover-title-hide");
+    });
+
+    funZoneButton.addEventListener('mouseover', function () {
+      hoverTitle.textContent = '• About Me •';
+      hoverTitle.setAttribute("class", "hover-title-show");
+    });
+
+    funZoneButton.addEventListener('mouseleave', function () {
+      hoverTitle.setAttribute("class", "hover-title-hide");
+    });
+
+
+  </script>
 
 
 </body>

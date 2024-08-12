@@ -3,6 +3,31 @@ body {
   margin: 0 0 0 0;
 }
 
+.hover-title-container {
+  position: absolute;
+  z-index: 5;
+  bottom: 50px;
+  width: 100vw;
+}
+
+.hover-title-show{
+  text-align: center;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 18px;
+  color: rgb(35, 35, 35);
+  opacity: 1;
+  transition: all 0.1s ease-in;
+}
+
+.hover-title-hide{
+  text-align: center;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 18px;
+  color: rgb(35, 35, 35);
+  opacity: 0;
+  transition: all 0.1s ease-out;
+}
+
 .lightswitch input {
   display: none;
 }

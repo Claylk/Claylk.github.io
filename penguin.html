@@ -36,10 +36,21 @@
     let x_size = 120;
     let level_scale_factor = 4;
 
-    let hori_move = tile_hori_size * 240;
-    let vert_move = tile_vert_size * 240;
+    let hori_move = tile_hori_size * 480;
+    let vert_move = tile_vert_size * 480;
 
     const start_position = new Vec2(center().x - (12 * level_scale_factor), center().y - (13 * level_scale_factor));
+    
+    const left = new Vec2(-hori_move, -vert_move);
+    const right = new Vec2(hori_move, vert_move);
+    const up = new Vec2(hori_move, -vert_move);
+    const down = new Vec2(-hori_move, vert_move);
+
+    const left_unscaled = new Vec2(-tile_hori_size * 2 * level_scale_factor, -tile_vert_size * 2 * level_scale_factor);
+    const right_unscaled = new Vec2(tile_hori_size * 2 * level_scale_factor, tile_vert_size * 2 * level_scale_factor);
+    const up_unscaled = new Vec2(tile_hori_size * 2 * level_scale_factor, -tile_vert_size * 2 * level_scale_factor);
+    const down_unscaled = new Vec2(-tile_hori_size * 2 * level_scale_factor, tile_vert_size * 2 * level_scale_factor);
+
 
     const test_level = add([
         sprite("test_level"),
@@ -49,32 +60,28 @@
 
     const left_arrow = add([
         sprite("left_arrow"),
-        pos(start_position.x - tile_hori_size * level_scale_factor * 2, 
-            start_position.y + tile_vert_size * level_scale_factor * 2),
+        pos(0, 0),
         opacity(1),
         scale(level_scale_factor),
     ])
     
     const right_arrow = add([
         sprite("right_arrow"),
-        pos(start_position.x + tile_hori_size * level_scale_factor * 2, 
-            start_position.y - tile_vert_size * level_scale_factor * 2),
+        pos(0, 0),
         opacity(1),
         scale(level_scale_factor),
     ])
 
     const up_arrow = add([
         sprite("right_arrow"),
-        pos(start_position.x + tile_hori_size * level_scale_factor * 2, 
-            start_position.y + tile_vert_size * level_scale_factor * 2),
+        pos(0, 0),
         opacity(1),
         scale(level_scale_factor),
     ])
 
     const down_arrow = add([
-        sprite("left_arrow"),
-        pos(start_position.x - tile_hori_size * level_scale_factor * 2, 
-            start_position.y - tile_vert_size * level_scale_factor * 2),
+        sprite("left_arrow"),        
+        pos(0, 0),
         opacity(1),
         scale(level_scale_factor),
     ])
@@ -87,35 +94,49 @@
 
     player.play("idle");
 
-    onKeyRelease("d", () => {
-        player.move(hori_move, vert_move)
-    })
+    onKeyRelease("space", () => {
+        if (left_arrow.opacity) player.move(left);
+        if (right_arrow.opacity) player.move(right);
+        if (up_arrow.opacity) player.move(up);
+        if (down_arrow.opacity) player.move(down);
 
-    onKeyRelease("a", () => {
-        player.move(-hori_move, -vert_move)
-    })
-
-    onKeyRelease("w", () => {
-        player.move(hori_move, -vert_move)
-    })
-
-    onKeyRelease("s", () => {
-        player.move(-hori_move, vert_move)
+        left_arrow.opacity = right_arrow.opacity = up_arrow.opacity = down_arrow.opacity = 0;
     })
 
     onKeyRelease("right", () => {
-       
+        right_arrow.moveTo(player.pos.x + right_unscaled.x, 
+                           player.pos.y + right_unscaled.y);
+        left_arrow.opacity = 0;
+        right_arrow.opacity = 1;
+        up_arrow.opacity = 0;
+        down_arrow.opacity = 0;
     })
 
     onKeyRelease("left", () => {
+        left_arrow.moveTo(player.pos.x + left_unscaled.x, 
+                           player.pos.y + left_unscaled.y);
+        left_arrow.opacity = 1;
+        right_arrow.opacity = 0;
+        up_arrow.opacity = 0;
+        down_arrow.opacity = 0;
     })
 
     onKeyRelease("up", () => {
-        right_arrow.moveTo(start_position.x + player_x + hori_move, 
-                           start_position.y + player_y - vert_move);
+        up_arrow.moveTo(player.pos.x + up_unscaled.x, 
+                           player.pos.y + up_unscaled.y);
+        left_arrow.opacity = 0;
+        right_arrow.opacity = 0;
+        up_arrow.opacity = 1;
+        down_arrow.opacity = 0;
     })
 
     onKeyRelease("down", () => {
+        down_arrow.moveTo(player.pos.x + down_unscaled.x, 
+                           player.pos.y + down_unscaled.y);
+        left_arrow.opacity = 0;
+        right_arrow.opacity = 0;
+        up_arrow.opacity = 0;
+        down_arrow.opacity = 1;
     })
 
 </script>
