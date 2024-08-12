@@ -6,7 +6,7 @@ body {
 .hover-title-container {
   position: absolute;
   z-index: 5;
-  bottom: 50px;
+  bottom: 49px;
   width: 100vw;
 }
 
