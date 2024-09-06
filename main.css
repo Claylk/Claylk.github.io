@@ -44,6 +44,7 @@ body {
   background-image: url("assets/lightswitch_on.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  animation: fadeIn 0.8s ease-in-out;
   transition: transform 0.3s;
 }
 
@@ -175,4 +176,15 @@ body {
   font-family: 'Ubuntu Mono', monospace;
   font-size: 14px;
   color: rgb(50, 50, 50);
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-5px);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
