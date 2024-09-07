@@ -36,6 +36,16 @@ body {
     width: 100vw;
 }
 
+.track-recorder {
+    margin-top: 45px;
+    margin-bottom: 50px;
+    position: relative;
+    font-family: 'Ubuntu Mono', monospace;
+    color: rgb(35, 35, 35);
+    opacity: 1;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
 .trajectory-planning {
     position: relative;
     font-family: 'Ubuntu Mono', monospace;
@@ -112,6 +122,20 @@ body {
     padding-bottom: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.8s ease-in-out;
+}
+
+.link {
+    padding-right: 10px;
+}
+
+.link-bar {
+    display: flex;
+}
+
+.waveform {
+    margin-left: 30px;
+    width: 40vw;
+    height: auto;
 }
 
 .moving-arm {

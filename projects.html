@@ -54,22 +54,41 @@
         </div>
         <div class="gallery">
             <div class="gallery-entry">
-                <video class="gallery-video" muted loop autoplay>
+                <video class="gallery-video" muted controls>
                     <source src="assets/route_zooming.mp4" type="video/mp4">
                 </video>
                 <p class="gallery-desc">Zoom and pan animations</p>
             </div>
             <div class="gallery-entry">
-                <video class="gallery-video" muted loop autoplay>
+                <video class="gallery-video" muted controls>
                     <source src="assets/a_star.mp4" type="video/mp4">
                 </video>
                 <p class="gallery-desc">A Star algorithm</p>
             </div>
             <div class="gallery-entry">
-                <video class="gallery-video" muted loop autoplay>
+                <video class="gallery-video" muted controls>
                     <source src="assets/2opt.mp4" type="video/mp4">
                 </video>
                 <p class="gallery-desc">2-opt algorithm</p>
+            </div>
+        </div>
+        <div class="track-recorder">
+            <div class="content">
+                <div class="text">
+                    <p class="header">3 Track Digital Recorder</p>
+                    <div class="link-bar">
+                        <a class="link" href="https://github.com/Claylk/DE1-Soc-3-Track-Recorder">Github Link</a>
+                        <a class="link" href="https://youtu.be/qvkMI-x_3Tg">Demo Video</a>
+                    </div>
+                    <p class="subtitle">For Computer Organization at the University of Toronto</p>
+                    <p class="body">I worked with Pandu Kartosedono to create a digital recording and editing program for an Altera DE1-SoC FPGA. The program allows for 3 tracks to be layered, looped, and edited with music production in mind. The editor has highlighting / copy / paste / mute / delete functions.</p>
+                    <p class="body">All code was written in C. Graphics were doubled-buffered and made from scratch by writing to the board's video memory manually.</p>
+                </div>
+                <div class="video">
+                    <video class="waveform" loop muted autoplay>
+                        <source src="assets/track_recorder.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
         </div>
     </div>

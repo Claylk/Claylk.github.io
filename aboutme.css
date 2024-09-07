@@ -42,6 +42,12 @@ body {
   background-color: white;
 } */
 
+.page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .about-me {
   display: flex;
   justify-content: space-between;
@@ -50,8 +56,8 @@ body {
   gap: 20px;
   width: 100%;
   flex-direction: row;
-  position: absolute;
-  top: 120px;
+  position: relative;
+  margin-top: 20px;
   padding-left: 15vw;
   padding-right: 15vw;
 }
@@ -86,6 +92,56 @@ body {
   background-size: 100% 100%;
   animation: fadeIn 0.8s ease-in-out;
 }
+
+.music-bar {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.start-stop {
+  display:none;
+}
+
+.start-stop + label{
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-image: url("assets/play_button.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: transform 0.3s;
+}
+
+.start-stop:hover + label {
+  transform: translateY(-3px);
+}
+
+.start-stop:checked + label{
+  background-image: url("assets/pause_button.png");
+}
+
+.music-note1 {
+  background-image: url("assets/music_note.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.music-note2 {
+  background-image: url("assets/music_note.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
 
 @keyframes fadeIn {
   from {
