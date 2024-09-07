@@ -60,8 +60,7 @@
 
         function updateTrackInfo() {
             widget1.getCurrentSound(function (sound) {
-                if (playing) songTitle.textContent = sound.title + ' • ' + sound.user.username;
-                else songTitle.textContent = '';
+                if (sound) songTitle.textContent = sound.title + ' • ' + sound.user.username;
             });
         }
 
@@ -69,11 +68,11 @@
             if (this.checked) {
                 widget1.play(); // Play the widget if checked
                 widget2.play(); // Play the widget if checked
-                playing = true;
+                updateTrackInfo();
             } else {
                 widget1.pause(); // Pause the widget if unchecked
                 widget2.pause(); // Pause the widget if unchecked
-                playing = false;
+                songTitle.textContent = '';
             }
         });
 
