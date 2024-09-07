@@ -42,8 +42,7 @@
             <div class="song-title-container">
                 <p class="song-title" id="song-title"></p>
             </div>
-        </div>
-        
+        </div>        
     </div>
 
     <script>
@@ -54,12 +53,15 @@
         var widget1         = SC.Widget(iframeElement);
         var widget2         = SC.Widget(iframeElementID);
 
+        var playing = false;
+
         const playButton = document.getElementById('start-stop');
         const songTitle = document.getElementById('song-title');
 
         function updateTrackInfo() {
             widget1.getCurrentSound(function (sound) {
-                if (sound) songTitle.textContent = sound.title + ' • ' + sound.user.username;
+                if (playing) songTitle.textContent = sound.title + ' • ' + sound.user.username;
+                else songTitle.textContent = '';
             });
         }
 
@@ -67,13 +69,15 @@
             if (this.checked) {
                 widget1.play(); // Play the widget if checked
                 widget2.play(); // Play the widget if checked
-                updateTrackInfo();
+                playing = true;
             } else {
                 widget1.pause(); // Pause the widget if unchecked
                 widget2.pause(); // Pause the widget if unchecked
-                songTitle.textContent = '';
+                playing = false;
             }
         });
+
+        updateTrackInfo();
 
     </script>
 
