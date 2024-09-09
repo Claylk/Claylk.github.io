@@ -78,6 +78,7 @@ body {
   color: rgb(35, 35, 35);
   opacity: 1;
   animation: fadeIn 0.8s ease-in-out;
+  border-radius: 15px;
 }
 
 .bio {
@@ -92,6 +93,7 @@ body {
   background-image: url("assets/aboutme.png");
   background-size: 100% 100%;
   animation: fadeIn 0.8s ease-in-out;
+  border-radius: 15px;
 }
 
 .song-title-container {

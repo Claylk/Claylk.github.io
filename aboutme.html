@@ -66,12 +66,12 @@
 
         playButton.addEventListener('change', function () {
             if (this.checked) {
-                widget1.play(); // Play the widget if checked
-                widget2.play(); // Play the widget if checked
+                widget1.play();
+                widget2.play();
                 updateTrackInfo();
             } else {
-                widget1.pause(); // Pause the widget if unchecked
-                widget2.pause(); // Pause the widget if unchecked
+                widget1.pause();
+                widget2.pause();
                 songTitle.textContent = '';
             }
         });

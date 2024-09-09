@@ -31,7 +31,7 @@
                 </div>
                 <div class="video">
                     <video class="moving-arm" loop muted autoplay>
-                        <source src="assets/moving_arm.mp4" type="video/mp4">
+                        <source class="video-source" src="assets/moving_arm.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -40,7 +40,7 @@
             <div class="content">
                 <div class="video">
                     <video class="car-driving" loop muted autoplay>
-                        <source src="assets/car_driving.mp4" type="video/mp4">
+                        <source class="video-source" src="assets/car_driving.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="text">
@@ -52,24 +52,26 @@
                 </div>
             </div>
         </div>
-        <div class="gallery">
-            <div class="gallery-entry">
-                <video class="gallery-video" muted controls>
-                    <source src="assets/route_zooming.mp4" type="video/mp4">
-                </video>
-                <p class="gallery-desc">Zoom and pan animations</p>
-            </div>
-            <div class="gallery-entry">
-                <video class="gallery-video" muted controls>
-                    <source src="assets/a_star.mp4" type="video/mp4">
-                </video>
-                <p class="gallery-desc">A Star algorithm</p>
-            </div>
-            <div class="gallery-entry">
-                <video class="gallery-video" muted controls>
-                    <source src="assets/2opt.mp4" type="video/mp4">
-                </video>
-                <p class="gallery-desc">2-opt algorithm</p>
+        <div class = "content">
+            <div class="gallery">
+                <div class="gallery-entry">
+                    <video class="gallery-video" muted controls>
+                        <source class="video-source" src="assets/route_zooming.mp4" type="video/mp4">
+                    </video>
+                    <p class="gallery-desc">Zoom and pan animations</p>
+                </div>
+                <div class="gallery-entry">
+                    <video class="gallery-video" muted controls>
+                        <source class="video-source" src="assets/a_star.mp4" type="video/mp4">
+                    </video>
+                    <p class="gallery-desc">A Star algorithm</p>
+                </div>
+                <div class="gallery-entry">
+                    <video class="gallery-video" muted controls>
+                        <source class="video-source" src="assets/2opt.mp4" type="video/mp4">
+                    </video>
+                    <p class="gallery-desc">2-opt algorithm</p>
+                </div>
             </div>
         </div>
         <div class="track-recorder">
@@ -86,12 +88,38 @@
                 </div>
                 <div class="video">
                     <video class="waveform" loop muted autoplay>
-                        <source src="assets/track_recorder.mp4" type="video/mp4">
+                        <source class="video-source" src="assets/track_recorder.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.content');
+
+            function checkVisibility() {
+                const viewportHeight = window.innerHeight;
+                
+                items.forEach(item => {
+                    const rect = item.getBoundingClientRect();
+                    if (rect.top < viewportHeight && rect.bottom > 0) {
+                        item.classList.add('visible');
+                    } else {
+                        item.classList.remove('visible');
+                    }
+                });
+            }
+
+            // Initial check
+            checkVisibility();
+
+            window.addEventListener('scroll', checkVisibility);
+
+            window.addEventListener('resize', checkVisibility);
+        });
+    </script>
 
 </body>
 

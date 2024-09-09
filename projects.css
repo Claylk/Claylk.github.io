@@ -18,7 +18,6 @@ body {
     z-index: 1;
     text-align: left;
     top: 10px;
-    z-index: 1;
     font-family: 'Ubuntu Mono', monospace;
     font-size: 20px;
     color: rgb(35, 35, 35);
@@ -27,6 +26,7 @@ body {
 }
 
 .project-list {
+    font-size: 16;
     display: flex;
     justify-content: top;
     flex-direction: column;
@@ -77,10 +77,17 @@ body {
 }
 
 .content {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: stretch;
     width: 80vw;
+}
+
+.content.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .gallery {
@@ -97,6 +104,7 @@ body {
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: fadeIn 0.8s ease-in-out;
+    border-radius: 15px;
 }
 
 .gallery-desc {
@@ -109,19 +117,25 @@ body {
 
 .video {
     display: flex;
+    object-fit: cover;
     position: relative;
     animation: fadeIn 0.8s ease-in-out;
+    overflow: hidden;
+}
+
+.video video {
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .text {
     flex: 1;
     position: relative;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.8s ease-in-out;
+    border-radius: 15px;
 }
 
 .link {
@@ -140,14 +154,18 @@ body {
 
 .moving-arm {
     margin-left: 30px;
-    width: 25vw;
+    width: 23vw;
     height: auto;
 }
 
 .car-driving {
     margin-right: 30px;
-    width: 40vw;
+    width: 30vw;
     height: auto;
+}
+
+.video-source {
+    border-radius: 15px;
 }
 
 .home-page-link {
