@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <div class="home-page">
-        <a href="index.html" class="home-page-link"></a>
+    <div class="home-page" id="">
+        <a class="home-page-link"></a>
     </div>
     <div class="main-header">
         <p class="intro">Here are some of the projects I've done and am currently working on!</p>
@@ -94,6 +94,12 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('home-page-link').addEventListener('click', function() {
+          window.history.back();
+        });
+      </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
