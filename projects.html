@@ -104,7 +104,7 @@
                 
                 items.forEach(item => {
                     const rect = item.getBoundingClientRect();
-                    if (rect.top < viewportHeight && rect.bottom > 0) {
+                    if (rect.top + 100 < viewportHeight && rect.bottom > 0) {
                         item.classList.add('visible');
                     } else {
                         item.classList.remove('visible');
