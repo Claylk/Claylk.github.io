@@ -38,7 +38,7 @@ body {
 
 .track-recorder {
     margin-top: 45px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     position: relative;
     font-family: 'Ubuntu Mono', monospace;
     color: rgb(35, 35, 35);
@@ -179,6 +179,69 @@ body {
     background-image: url("assets/back_button.png");
     transition: transform 0.3s;
 }
+
+.custom-mouse {
+    position: relative;
+    font-family: 'Ubuntu Mono', monospace;
+    color: rgb(35, 35, 35);
+    opacity: 1;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.mouse-render {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 35vw;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("assets/mouse_render.png");
+    margin-right: 30px;
+}
+
+.custom-mouse-1 {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 26vw;
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("assets/mouse_shell.png");
+    margin-bottom: 100px;
+}
+
+.custom-mouse-2 {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 26vw;
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("assets/mouse_pcb.png");
+    margin-bottom: 100px;
+}
+
+.custom-mouse-3 {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 26vw;
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("assets/mouse_irl.png");
+    margin-bottom: 100px;
+}
+
+
 
 @keyframes fadeIn {
     from {
