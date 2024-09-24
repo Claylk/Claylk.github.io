@@ -76,20 +76,24 @@
     const funZoneButton = document.getElementById('fun-zone-link');
 
     projectsButton.addEventListener('mouseover', function () {
+      projectsButton.style.backgroundImage = "url('assets/door_open.png')";
       hoverTitle.textContent = '• Projects •';
       hoverTitle.setAttribute("class", "hover-title-show");
     });
 
     projectsButton.addEventListener('mouseleave', function () {
+      projectsButton.style.backgroundImage = "url('assets/door_closed.png')";
       hoverTitle.setAttribute("class", "hover-title-hide");
     });
 
     funZoneButton.addEventListener('mouseover', function () {
+      funZoneButton.style.backgroundImage = "url('assets/drawer_open.png')";
       hoverTitle.textContent = '• About Me •';
       hoverTitle.setAttribute("class", "hover-title-show");
     });
 
     funZoneButton.addEventListener('mouseleave', function () {
+      funZoneButton.style.backgroundImage = "url('assets/drawer_closed.png')";
       hoverTitle.setAttribute("class", "hover-title-hide");
     });
 

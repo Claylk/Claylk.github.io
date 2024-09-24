@@ -78,7 +78,6 @@ body {
 }
 
 .about-me-link:hover {
-  background-image: url("assets/door_open.png");
   height: 449px;
   top: 86px;
 }
@@ -93,10 +92,6 @@ body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-image: url("assets/drawer_closed.png");
-}
-
-.fun-zone-link:hover {
-  background-image: url("assets/drawer_open.png");
 }
 
 
