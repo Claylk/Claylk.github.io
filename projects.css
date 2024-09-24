@@ -195,7 +195,7 @@ body {
     height: auto;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("assets/mouse_render.png");
+    background-image: url("assets/mouse_irl.png");
     margin-right: 30px;
 }
 
@@ -237,7 +237,7 @@ body {
     border-radius: 5px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("assets/mouse_irl.png");
+    background-image: url("assets/mouse_render.png");
     margin-bottom: 100px;
 }
 
