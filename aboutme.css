@@ -87,13 +87,15 @@ body {
 
 .picture {
   position: relative;
-  width: 400px;
+  width: 450px;
   height: 379px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-image: url("assets/aboutme.png");
-  background-size: 100% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   animation: fadeIn 0.8s ease-in-out;
   border-radius: 5px;
+
 }
 
 .song-title-container {
