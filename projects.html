@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Projects</title>
+    <title>Projects & Experience</title>
     <script src="https://w.soundcloud.com/player/api.js" async></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,106 +15,134 @@
         <a href="index.html" class="home-page-link"></a>
     </div>
     <div class="main-header">
-        <p class="intro">Here are some of the projects I've done and am currently working on!</p>
+        <p class="intro">Here's my work experience and some of the projects I've done / am currently working on!</p>
     </div>
-    <div class="project-list">
-        <div class ="trajectory-planning">
-            <div class="content">
-                <div class="text">
-                    <p class="header">Trajectory Planning for Robotic Arm</p>
-                    <a class="link" href="https://github.com/rsx-utoronto/rsx-rover/blob/master/rover/arm/ros1/arm_trajectory_planning.py">Github Link</a>
-                    <p class="body">For the Robotics for Space Exploration design team (at the University of Toronto), I created a ROS node that controls a mechanical arm mounted atop our rover.</p>
-                    <p class="body">The primary goal of the node is to reduce the arm's jerk when moving between two points, ensuring safety and durability. It does this by generating a polynomial curve for each motor that drives the arm, which has zero velocity and acceleration at the end points.
-                                       A PID controller helps to compensate for error between calculated angles and sensor data from CAN.
-                    </p>
-                    <p class="body">The node was written for ROS 1 using Python.</p>
-                </div>
-                <div class="video">
-                    <video class="moving-arm" loop muted autoplay>
-                        <source class="video-source" src="assets/moving_arm.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-        </div>
-        <div class ="mapper">
-            <div class="content">
-                <div class="video">
-                    <video class="car-driving" loop muted autoplay>
-                        <source class="video-source" src="assets/car_driving.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="text">
-                    <p class="header">Roady</p>
-                    <p class="subtitle">For Software Design and Communication at the University of Toronto</p>
-                    <p class="body">Two groupmates and I created a GIS system (similar to Google Maps) and business pitch as part of a software design course.</p>
-                    <p class="body">The application uses the Open Street Map database and a graphics library provided by the University of Toronto (ezgl). My most challenging responsibilities for this project were implementing the A Star pathfinding algorithm, 2-opt algorithm for the travelling salesman problem, and creating the animations for the map (such as the one shown in the video).</p>
-                    <p class="body">I can't really link a GitHub here in case it gets me kicked out of school. All code was written in C++.</p>
-                </div>
-            </div>
-        </div>
-        <div class = "content">
-            <div class="gallery">
-                <div class="gallery-entry">
-                    <video class="gallery-video" muted controls>
-                        <source class="video-source" src="assets/route_zooming.mp4" type="video/mp4">
-                    </video>
-                    <p class="gallery-desc">Zoom and pan animations</p>
-                </div>
-                <div class="gallery-entry">
-                    <video class="gallery-video" muted controls>
-                        <source class="video-source" src="assets/a_star.mp4" type="video/mp4">
-                    </video>
-                    <p class="gallery-desc">A Star algorithm</p>
-                </div>
-                <div class="gallery-entry">
-                    <video class="gallery-video" muted controls>
-                        <source class="video-source" src="assets/2opt.mp4" type="video/mp4">
-                    </video>
-                    <p class="gallery-desc">2-opt algorithm</p>
-                </div>
-            </div>
-        </div>
-        <div class="track-recorder">
-            <div class="content">
-                <div class="text">
-                    <p class="header">3-Track Digital Recorder</p>
-                    <div class="link-bar">
-                        <a class="link" href="https://github.com/Claylk/DE1-Soc-3-Track-Recorder">Github Link</a>
-                        <a class="link" href="https://youtu.be/qvkMI-x_3Tg">Demo Video</a>
+    <div class="page-content">
+        <section class="page-section" id="work-experience">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="work-experience">
+                <div class="content">
+                    <div class="experience-media">
+                        <img class="experience-logo" src="assets/amd_logo.jpg" alt="AMD logo">
+                        <p class="experience-dates">May 2025 <span class="date-arrow" aria-hidden="true">→</span> August 2026</p>
                     </div>
-                    <p class="subtitle">For Computer Organization at the University of Toronto</p>
-                    <p class="body">I worked with Pandu Argareswara to create a digital recording and editing program for an Altera DE1-SoC FPGA. The program allows for 3 tracks to be recorded, layered, looped, and edited with music production in mind. The editor has highlighting / copy / paste / mute / delete functions.</p>
-                    <p class="body">All code was written in C. Graphics were doubled-buffered and made from scratch by writing to the board's video memory manually.</p>
-                </div>
-                <div class="video">
-                    <video class="waveform" loop muted autoplay>
-                        <source class="video-source" src="assets/track_recorder.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="custom-mouse">
-            <div class="content">
-                <div class="video">
-                    <div class="mouse-render"></div>
-                </div>
-                <div class="text">
-                    <p class="header">Custom Computer Mouse</p>
-                    <div class="link-bar">
-                        <a class="link" href="https://github.com/Claylk/3D-Printed-Mouse-Shell">Github Link</a>
+                    <div class="text experience-card">
+                        <p class="header">Display Driver Software Engineer Intern</p>
+                        <p class="subtitle">AMD — Markham, ON</p>
+                        <p class="body">For my PEY, I worked on AMD's Radeon Driver for Windows on the DAL team (display abstraction layer) which programs the display IP hardware to send a video stream from the GPU to display, and to support various modern display/OS features (Freesync, VR, HDR, HWFQ, MPO, etc.). I spent most of my time on sustaining for the 9070/9060 GPU product launches, fixing 40+ bugs reported by end-users, clients, and QA, fixing visual corruptions, blackscreens, and system hangs. I also had my fair share of intern-only tasks, such as fixing 1000+ CodeQL and Coverity static analysis alerts using a fully-automated agent (i.e. Claude working hard while I went home for the day).</p>
+                        <p class="body">Some of the driver is shared with Linux. Here are some of my open source contributions:</p>
+                        <ul class="experience-list contribution-links">
+                            <li><a class="link" href="https://github.com/torvalds/linux/commit/ca74cc428f2b9d0170c56b473dbcfd7fa01daf2d">drm/amd/display: ensure committing streams is seamless</a></li>
+                            <li><a class="link" href="https://github.com/torvalds/linux/commit/7d9ec9dc20ecdb1661f4538cd9112cd3d6a5f15a">drm/amd/display: bypass post csc for additional color spaces in dal</a></li>
+                            <li><a class="link" href="https://github.com/torvalds/linux/commit/306cbcc6f687d791ab3cc8fbbe30f5286fd0d1e5">drm/amd/display: incorrect conditions for failing dto calculations</a></li>
+                        </ul>
                     </div>
-                    <p class="body">In an effort to prevent carpal tunnel and arthritis, I created a custom mouse shell using Fusion 360 that fits the dimensions of my hand. The design was printed in resin, which allowed for friction-fit assembly.</p>
-                    <p class="body">The project was good practice in making organic shapes in CAD - lots of contoured lofts. The mouse PCB's scroll wheel needed to be chopped in half and soldered back on to fit the shell, which resulted in the jankiest wiring job I've ever done.</p>
                 </div>
             </div>
-        </div>
-        <div class ="content">
-            <div class="gallery">
-                <div class="custom-mouse-3"></div>
-                <div class="custom-mouse-1"></div>
-                <div class="custom-mouse-2"></div>
+        </section>
+
+        <section class="page-section" id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-list">
+                <div class="trajectory-planning">
+                    <div class="content">
+                        <div class="text">
+                            <p class="header">Trajectory Planning for Robotic Arm</p>
+                            <a class="link" href="https://github.com/rsx-utoronto/rsx-rover/blob/master/rover/arm/ros1/arm_trajectory_planning.py">Github Link</a>
+                            <p class="body">For the Robotics for Space Exploration design team (at the University of Toronto), I created a ROS node that controls a mechanical arm mounted atop our rover.</p>
+                            <p class="body">The primary goal of the node is to reduce the arm's jerk when moving between two points, ensuring safety and durability. It does this by generating a polynomial curve for each motor that drives the arm, which has zero velocity and acceleration at the end points.
+                                               A PID controller helps to compensate for error between calculated angles and sensor data from CAN.
+                            </p>
+                            <p class="body">The node was written for ROS 1 using Python.</p>
+                        </div>
+                        <div class="video">
+                            <video class="moving-arm" loop muted autoplay>
+                                <source class="video-source" src="assets/moving_arm.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="mapper">
+                    <div class="content">
+                        <div class="video">
+                            <video class="car-driving" loop muted autoplay>
+                                <source class="video-source" src="assets/car_driving.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="text">
+                            <p class="header">Roady</p>
+                            <p class="subtitle">For Software Design and Communication at the University of Toronto</p>
+                            <p class="body">Two groupmates and I created a GIS system (similar to Google Maps) and business pitch as part of a software design course.</p>
+                            <p class="body">The application uses the Open Street Map database and a graphics library provided by the University of Toronto (ezgl). My most challenging responsibilities for this project were implementing the A Star pathfinding algorithm, 2-opt algorithm for the travelling salesman problem, and creating the animations for the map (such as the one shown in the video).</p>
+                            <p class="body">I can't really link a GitHub here in case it gets me kicked out of school. All code was written in C++.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="gallery">
+                        <div class="gallery-entry">
+                            <video class="gallery-video" muted controls>
+                                <source class="video-source" src="assets/route_zooming.mp4" type="video/mp4">
+                            </video>
+                            <p class="gallery-desc">Zoom and pan animations</p>
+                        </div>
+                        <div class="gallery-entry">
+                            <video class="gallery-video" muted controls>
+                                <source class="video-source" src="assets/a_star.mp4" type="video/mp4">
+                            </video>
+                            <p class="gallery-desc">A Star algorithm</p>
+                        </div>
+                        <div class="gallery-entry">
+                            <video class="gallery-video" muted controls>
+                                <source class="video-source" src="assets/2opt.mp4" type="video/mp4">
+                            </video>
+                            <p class="gallery-desc">2-opt algorithm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="track-recorder">
+                    <div class="content">
+                        <div class="text">
+                            <p class="header">3-Track Digital Recorder</p>
+                            <div class="link-bar">
+                                <a class="link" href="https://github.com/Claylk/DE1-Soc-3-Track-Recorder">Github Link</a>
+                                <a class="link" href="https://youtu.be/qvkMI-x_3Tg">Demo Video</a>
+                            </div>
+                            <p class="subtitle">For Computer Organization at the University of Toronto</p>
+                            <p class="body">I worked with Pandu Argareswara to create a digital recording and editing program for an Altera DE1-SoC FPGA. The program allows for 3 tracks to be recorded, layered, looped, and edited with music production in mind. The editor has highlighting / copy / paste / mute / delete functions.</p>
+                            <p class="body">All code was written in C. Graphics were doubled-buffered and made from scratch by writing to the board's video memory manually.</p>
+                        </div>
+                        <div class="video">
+                            <video class="waveform" loop muted autoplay>
+                                <source class="video-source" src="assets/track_recorder.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="custom-mouse">
+                    <div class="content">
+                        <div class="video">
+                            <div class="mouse-render"></div>
+                        </div>
+                        <div class="text">
+                            <p class="header">Custom Computer Mouse</p>
+                            <div class="link-bar">
+                                <a class="link" href="https://github.com/Claylk/3D-Printed-Mouse-Shell">Github Link</a>
+                            </div>
+                            <p class="body">In an effort to prevent carpal tunnel and arthritis, I created a custom mouse shell using Fusion 360 that fits the dimensions of my hand. The design was printed in resin, which allowed for friction-fit assembly.</p>
+                            <p class="body">The project was good practice in making organic shapes in CAD - lots of contoured lofts. The mouse PCB's scroll wheel needed to be chopped in half and soldered back on to fit the shell, which resulted in the jankiest wiring job I've ever done.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="gallery">
+                        <div class="custom-mouse-3"></div>
+                        <div class="custom-mouse-1"></div>
+                        <div class="custom-mouse-2"></div>
+                    </div>
+                </div> -->
             </div>
-        </div> -->
+        </section>
     </div>
 
     <script>
